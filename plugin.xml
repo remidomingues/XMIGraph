@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/XMI"
+            class="org.omg.xmi.XmiPackage"
+            genModel="model/ecore.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="xmi"
+            class="org.omg.xmi.util.XmiResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/uml2/1.0.0/UML"
+            class="org.eclipse.uml2._1._0._0.uml.UmlPackage"
+            genModel="model/ecore.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="uml"
+            class="org.eclipse.uml2._1._0._0.uml.util.UmlResourceFactoryImpl"/>
+   </extension>
+
+</plugin>
